@@ -1,0 +1,13 @@
+input_dir: Digio
+output_dir: Digio/Generated
+xcassets:
+  inputs: Resources/Assets.xcassets
+  outputs:
+    templateName: swift5
+    output: Assets.generated.swift
+strings:
+  inputs: Resources
+  outputs:
+    - templateName: structured-swift5
+      output: Strings.generated.swift
+      
