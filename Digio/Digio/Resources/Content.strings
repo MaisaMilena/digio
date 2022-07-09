@@ -1,0 +1,6 @@
+// MARK: - Error
+"ApiError.urlNotFound" = "Não foi possível conectar com o servidor";
+"ApiError.decode" = "Ops! Houve um problema ao receber os dados do servidor";
+"ApiError.internetConection" = "Parece que não há conexão com a internet";
+
+

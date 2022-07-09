@@ -6,8 +6,11 @@ xcassets:
     templateName: swift5
     output: Assets.generated.swift
 strings:
-  inputs: Resources
+  inputs: Resources/Content.strings
   outputs:
-    - templateName: structured-swift5
-      output: Strings.generated.swift
+    templateName: structured-swift5
+    output: Strings.generated.swift
+    params:
+        publicAccess: false
+        enumName: "Strings"
       

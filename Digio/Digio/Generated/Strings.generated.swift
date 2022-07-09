@@ -9,11 +9,15 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
-internal enum L10n {
+internal enum Strings {
 
-  internal enum Home {
-    /// aaa
-    internal static let title = L10n.tr("content", "home.title")
+  internal enum ApiError {
+    /// Ops! Houve um problema ao receber os dados do servidor
+    internal static let decode = Strings.tr("Content", "ApiError.decode")
+    /// Parece que não há conexão com a internet
+    internal static let internetConection = Strings.tr("Content", "ApiError.internetConection")
+    /// Não foi possível conectar com o servidor
+    internal static let urlNotFound = Strings.tr("Content", "ApiError.urlNotFound")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
@@ -21,7 +25,7 @@ internal enum L10n {
 
 // MARK: - Implementation Details
 
-extension L10n {
+extension Strings {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
     let format = BundleToken.bundle.localizedString(forKey: key, value: nil, table: table)
     return String(format: format, locale: Locale.current, arguments: args)
