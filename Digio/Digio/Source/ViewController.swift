@@ -1,7 +1,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-    init() {
+    private var interactor: InteractorProtocol
+    
+    init(interactor: InteractorProtocol) {
+        self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -12,6 +15,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cyan
-        // Do any additional setup after loading the view.
+        interactor.fetch()
     }
 }

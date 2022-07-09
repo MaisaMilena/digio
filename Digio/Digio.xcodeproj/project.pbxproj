@@ -13,6 +13,11 @@
 		C22C04362879D1DC0048AE83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22C04342879D1DC0048AE83 /* LaunchScreen.storyboard */; };
 		C22C04412879D1DC0048AE83 /* DigioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C04402879D1DC0048AE83 /* DigioTests.swift */; };
 		C22C045A2879D4B30048AE83 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C04592879D4B30048AE83 /* UIWindow+Extension.swift */; };
+		C2960C80287A100500B45985 /* AppOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C7F287A100500B45985 /* AppOrchestrator.swift */; };
+		C2960C82287A11D800B45985 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C81287A11D800B45985 /* Interactor.swift */; };
+		C2960C84287A123800B45985 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C83287A123800B45985 /* Presenter.swift */; };
+		C2960C86287A12E500B45985 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C85287A12E500B45985 /* Coordinator.swift */; };
+		C2960C88287A15AB00B45985 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C87287A15AB00B45985 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		C22C04402879D1DC0048AE83 /* DigioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTests.swift; sourceTree = "<group>"; };
 		C22C04462879D1DC0048AE83 /* DigioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22C04592879D4B30048AE83 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		C2960C7F287A100500B45985 /* AppOrchestrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOrchestrator.swift; sourceTree = "<group>"; };
+		C2960C81287A11D800B45985 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		C2960C83287A123800B45985 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		C2960C85287A12E500B45985 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C2960C87287A15AB00B45985 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +106,7 @@
 				C22C04292879D1D80048AE83 /* AppDelegate.swift */,
 				C22C045C2879D98D0048AE83 /* Extensions */,
 				C22C045B2879D9000048AE83 /* Resources */,
-				C22C042D2879D1D80048AE83 /* ViewController.swift */,
+				C2960C7E287A0F0F00B45985 /* Source */,
 			);
 			path = Digio;
 			sourceTree = "<group>";
@@ -124,6 +134,19 @@
 				C22C04592879D4B30048AE83 /* UIWindow+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2960C7E287A0F0F00B45985 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C2960C7F287A100500B45985 /* AppOrchestrator.swift */,
+				C22C042D2879D1D80048AE83 /* ViewController.swift */,
+				C2960C81287A11D800B45985 /* Interactor.swift */,
+				C2960C83287A123800B45985 /* Presenter.swift */,
+				C2960C85287A12E500B45985 /* Coordinator.swift */,
+				C2960C87287A15AB00B45985 /* Service.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2960C84287A123800B45985 /* Presenter.swift in Sources */,
+				C2960C88287A15AB00B45985 /* Service.swift in Sources */,
 				C22C042E2879D1D80048AE83 /* ViewController.swift in Sources */,
+				C2960C80287A100500B45985 /* AppOrchestrator.swift in Sources */,
+				C2960C82287A11D800B45985 /* Interactor.swift in Sources */,
 				C22C045A2879D4B30048AE83 /* UIWindow+Extension.swift in Sources */,
 				C22C042A2879D1D80048AE83 /* AppDelegate.swift in Sources */,
+				C2960C86287A12E500B45985 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
