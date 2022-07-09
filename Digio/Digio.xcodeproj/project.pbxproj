@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C22C042A2879D1D80048AE83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C04292879D1D80048AE83 /* AppDelegate.swift */; };
-		C22C042C2879D1D80048AE83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C042B2879D1D80048AE83 /* SceneDelegate.swift */; };
 		C22C042E2879D1D80048AE83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C042D2879D1D80048AE83 /* ViewController.swift */; };
 		C22C04332879D1DC0048AE83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22C04322879D1DC0048AE83 /* Assets.xcassets */; };
 		C22C04362879D1DC0048AE83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22C04342879D1DC0048AE83 /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		C22C04262879D1D80048AE83 /* Digio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22C04292879D1D80048AE83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C22C042B2879D1D80048AE83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C22C042D2879D1D80048AE83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C22C04322879D1DC0048AE83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C22C04352879D1DC0048AE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			children = (
 				C22C04372879D1DC0048AE83 /* Info.plist */,
 				C22C04292879D1D80048AE83 /* AppDelegate.swift */,
-				C22C042B2879D1D80048AE83 /* SceneDelegate.swift */,
 				C22C045C2879D98D0048AE83 /* Extensions */,
 				C22C045B2879D9000048AE83 /* Resources */,
 				C22C042D2879D1D80048AE83 /* ViewController.swift */,
@@ -283,7 +280,6 @@
 				C22C042E2879D1D80048AE83 /* ViewController.swift in Sources */,
 				C22C045A2879D4B30048AE83 /* UIWindow+Extension.swift in Sources */,
 				C22C042A2879D1D80048AE83 /* AppDelegate.swift in Sources */,
-				C22C042C2879D1D80048AE83 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -433,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
