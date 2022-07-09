@@ -1,7 +1,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -15,7 +14,4 @@ class ViewController: UIViewController {
         view.backgroundColor = .cyan
         // Do any additional setup after loading the view.
     }
-
-
 }
-
