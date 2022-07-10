@@ -28,6 +28,11 @@
 		C2960C9B287A61A900B45985 /* Sentinel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C9A287A61A900B45985 /* Sentinel.swift */; };
 		C2960C9D287A703E00B45985 /* DependenciesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C9C287A703E00B45985 /* DependenciesProtocol.swift */; };
 		C2960C9F287A707B00B45985 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C9E287A707B00B45985 /* DependencyContainer.swift */; };
+		C2960CA3287B338800B45985 /* SpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960CA2287B338800B45985 /* SpotlightView.swift */; };
+		C2960CA7287B36C100B45985 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960CA6287B36C100B45985 /* UIImageView+extension.swift */; };
+		C2960CAA287B3D7C00B45985 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C2960CA9287B3D7C00B45985 /* SnapKit */; };
+		C2960CAC287B47C400B45985 /* ImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960CAB287B47C400B45985 /* ImageFactory.swift */; };
+		C2960CB0287B583300B45985 /* ViewCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960CAF287B583300B45985 /* ViewCompositor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,10 @@
 		C2960C9A287A61A900B45985 /* Sentinel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentinel.swift; sourceTree = "<group>"; };
 		C2960C9C287A703E00B45985 /* DependenciesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesProtocol.swift; sourceTree = "<group>"; };
 		C2960C9E287A707B00B45985 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		C2960CA2287B338800B45985 /* SpotlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightView.swift; sourceTree = "<group>"; };
+		C2960CA6287B36C100B45985 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		C2960CAB287B47C400B45985 /* ImageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFactory.swift; sourceTree = "<group>"; };
+		C2960CAF287B583300B45985 /* ViewCompositor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCompositor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2960CAA287B3D7C00B45985 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,13 +132,13 @@
 		C22C04282879D1D80048AE83 /* Digio */ = {
 			isa = PBXGroup;
 			children = (
+				C22C045B2879D9000048AE83 /* Resources */,
 				C2960C97287A607A00B45985 /* Util */,
 				C2960C90287A237700B45985 /* Network */,
 				C2960C89287A202A00B45985 /* Generated */,
 				C22C04372879D1DC0048AE83 /* Info.plist */,
 				C22C04292879D1D80048AE83 /* AppDelegate.swift */,
 				C22C045C2879D98D0048AE83 /* Extensions */,
-				C22C045B2879D9000048AE83 /* Resources */,
 				C2960C7E287A0F0F00B45985 /* Source */,
 			);
 			path = Digio;
@@ -156,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C22C04592879D4B30048AE83 /* UIWindow+Extension.swift */,
+				C2960CA6287B36C100B45985 /* UIImageView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +178,7 @@
 				C2960C7F287A100500B45985 /* AppOrchestrator.swift */,
 				C2960C85287A12E500B45985 /* Coordinator.swift */,
 				C2960C9E287A707B00B45985 /* DependencyContainer.swift */,
+				C2960CAB287B47C400B45985 /* ImageFactory.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -196,6 +208,7 @@
 				C2960C98287A609000B45985 /* Logger.swift */,
 				C2960C9A287A61A900B45985 /* Sentinel.swift */,
 				C2960C9C287A703E00B45985 /* DependenciesProtocol.swift */,
+				C2960CAF287B583300B45985 /* ViewCompositor.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -203,12 +216,21 @@
 		C2960CA0287B1F4200B45985 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				C2960CA1287B332200B45985 /* View */,
 				C22C042D2879D1D80048AE83 /* ViewController.swift */,
 				C2960C81287A11D800B45985 /* Interactor.swift */,
 				C2960C83287A123800B45985 /* Presenter.swift */,
 				C2960C87287A15AB00B45985 /* Service.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		C2960CA1287B332200B45985 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2960CA2287B338800B45985 /* SpotlightView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +250,9 @@
 			dependencies = (
 			);
 			name = Digio;
+			packageProductDependencies = (
+				C2960CA9287B3D7C00B45985 /* SnapKit */,
+			);
 			productName = Digio;
 			productReference = C22C04262879D1D80048AE83 /* Digio.app */;
 			productType = "com.apple.product-type.application";
@@ -300,6 +325,9 @@
 				Base,
 			);
 			mainGroup = C22C041D2879D1D80048AE83;
+			packageReferences = (
+				C2960CA8287B3D7C00B45985 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C22C04272879D1D80048AE83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,6 +398,7 @@
 				C22C042E2879D1D80048AE83 /* ViewController.swift in Sources */,
 				C2960C80287A100500B45985 /* AppOrchestrator.swift in Sources */,
 				C2960C82287A11D800B45985 /* Interactor.swift in Sources */,
+				C2960CA3287B338800B45985 /* SpotlightView.swift in Sources */,
 				C22C045A2879D4B30048AE83 /* UIWindow+Extension.swift in Sources */,
 				C2960C94287A24D600B45985 /* API.swift in Sources */,
 				C2960C99287A609000B45985 /* Logger.swift in Sources */,
@@ -379,7 +408,10 @@
 				C22C042A2879D1D80048AE83 /* AppDelegate.swift in Sources */,
 				C2960C86287A12E500B45985 /* Coordinator.swift in Sources */,
 				C2960C9F287A707B00B45985 /* DependencyContainer.swift in Sources */,
+				C2960CA7287B36C100B45985 /* UIImageView+extension.swift in Sources */,
 				C2960C8E287A215900B45985 /* Assets.generated.swift in Sources */,
+				C2960CAC287B47C400B45985 /* ImageFactory.swift in Sources */,
+				C2960CB0287B583300B45985 /* ViewCompositor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +743,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C2960CA8287B3D7C00B45985 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C2960CA9287B3D7C00B45985 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C2960CA8287B3D7C00B45985 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C22C041E2879D1D80048AE83 /* Project object */;
 }

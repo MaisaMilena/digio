@@ -1,18 +1,3 @@
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let homeData = try? newJSONDecoder().decode(HomeData.self, from: jsonData)
-
-//
-// To read values from URLs:
-//
-//   let task = URLSession.shared.homeDataTask(with: url) { homeData, response, error in
-//     if let homeData = homeData {
-//       ...
-//     }
-//   }
-//   task.resume()
-
 import Foundation
 
 // MARK: - HomeData
