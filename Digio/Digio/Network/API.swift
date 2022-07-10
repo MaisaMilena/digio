@@ -22,18 +22,6 @@ public enum APIError: Error {
     }
 }
 
-// MARK: Endpoint
-public protocol ApiEndpoint {
-    var baseURL: URL { get set }
-    var method: HTTPMethod { get }
-}
-
-extension ApiEndpoint {
-    func getPath() -> String {
-        baseURL.path
-    }
-}
-
 // MARK: API
 class Api<T: Decodable> {
     private let endpoint: ApiEndpoint
@@ -42,9 +30,8 @@ class Api<T: Decodable> {
     init(endpoint: ApiEndpoint) {
         self.endpoint = endpoint
     }
-    
-    typealias ResultHandler = (Result<T, APIError>) -> Void
-    func execute(method: HTTPMethod, completion: @escaping ResultHandler ) {
+
+    func execute(completion: @escaping (Result<T, APIError>) -> Void) {
         if let debugResult = handleDebug() {
             completion(debugResult)
         }
@@ -58,7 +45,10 @@ class Api<T: Decodable> {
     private func handleDebug() -> Result<T, APIError>? {
         var result: Result<T, APIError>? = nil
         if let debugEndpoint = debugEndpoint {
-            URLSession.shared.dataTask(with: debugEndpoint.baseURL) { data, response, error in
+            guard let url = debugEndpoint.getURL() else {
+                return .failure(.urlNotFound)
+            }
+            URLSession.shared.dataTask(with: url) { data, response, error in
                 result = self.handleSession(data, response, error)
             }.resume()
         }

@@ -23,6 +23,9 @@
 		C2960C8F287A215900B45985 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C8D287A215900B45985 /* Strings.generated.swift */; };
 		C2960C92287A23A400B45985 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C91287A23A400B45985 /* HomeData.swift */; };
 		C2960C94287A24D600B45985 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C93287A24D600B45985 /* API.swift */; };
+		C2960C96287A59E300B45985 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C95287A59E300B45985 /* Endpoint.swift */; };
+		C2960C99287A609000B45985 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C98287A609000B45985 /* Logger.swift */; };
+		C2960C9B287A61A900B45985 /* Sentinel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C9A287A61A900B45985 /* Sentinel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		C2960C8D287A215900B45985 /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
 		C2960C91287A23A400B45985 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		C2960C93287A24D600B45985 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C2960C95287A59E300B45985 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C2960C98287A609000B45985 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		C2960C9A287A61A900B45985 /* Sentinel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentinel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		C22C04282879D1D80048AE83 /* Digio */ = {
 			isa = PBXGroup;
 			children = (
+				C2960C97287A607A00B45985 /* Util */,
 				C2960C90287A237700B45985 /* Network */,
 				C2960C89287A202A00B45985 /* Generated */,
 				C22C04372879D1DC0048AE83 /* Info.plist */,
@@ -176,8 +183,18 @@
 			children = (
 				C2960C91287A23A400B45985 /* HomeData.swift */,
 				C2960C93287A24D600B45985 /* API.swift */,
+				C2960C95287A59E300B45985 /* Endpoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C2960C97287A607A00B45985 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C2960C98287A609000B45985 /* Logger.swift */,
+				C2960C9A287A61A900B45985 /* Sentinel.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2960C96287A59E300B45985 /* Endpoint.swift in Sources */,
 				C2960C8B287A20FD00B45985 /* Content.strings in Sources */,
 				C2960C84287A123800B45985 /* Presenter.swift in Sources */,
 				C2960C88287A15AB00B45985 /* Service.swift in Sources */,
@@ -340,6 +358,8 @@
 				C2960C82287A11D800B45985 /* Interactor.swift in Sources */,
 				C22C045A2879D4B30048AE83 /* UIWindow+Extension.swift in Sources */,
 				C2960C94287A24D600B45985 /* API.swift in Sources */,
+				C2960C99287A609000B45985 /* Logger.swift in Sources */,
+				C2960C9B287A61A900B45985 /* Sentinel.swift in Sources */,
 				C2960C92287A23A400B45985 /* HomeData.swift in Sources */,
 				C22C042A2879D1D80048AE83 /* AppDelegate.swift in Sources */,
 				C2960C86287A12E500B45985 /* Coordinator.swift in Sources */,

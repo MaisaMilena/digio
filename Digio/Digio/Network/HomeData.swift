@@ -16,24 +16,14 @@
 import Foundation
 
 // MARK: - HomeData
-struct HomeData: Codable {
+public struct HomeData: Codable {
     let spotlight: [Spotlight]
     let products: [Product]
     let cash: Cash
 }
 
-//
-// To read values from URLs:
-//
-//   let task = URLSession.shared.cashTask(with: url) { cash, response, error in
-//     if let cash = cash {
-//       ...
-//     }
-//   }
-//   task.resume()
-
 // MARK: - Cash
-struct Cash: Codable {
+public struct Cash: Codable {
     let title: String
     let bannerURL: String
     let cashDescription: String
@@ -45,7 +35,7 @@ struct Cash: Codable {
 }
 
 // MARK: - Product
-struct Product: Codable {
+public struct Product: Codable {
     let name: String
     let imageURL: String
     let productDescription: String
@@ -57,7 +47,7 @@ struct Product: Codable {
 }
 
 // MARK: - Spotlight
-struct Spotlight: Codable {
+public struct Spotlight: Codable {
     let name: String
     let bannerURL: String
     let spotlightDescription: String
@@ -65,31 +55,5 @@ struct Spotlight: Codable {
     enum CodingKeys: String, CodingKey {
         case name, bannerURL
         case spotlightDescription = "description"
-    }
-}
-
-// MARK: - Helper functions for creating encoders and decoders
-
-func newJSONDecoder() -> JSONDecoder {
-    let decoder = JSONDecoder()
-    return decoder
-}
-
-
-// MARK: - URLSession response handlers
-
-extension URLSession {
-    fileprivate func codableTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        return self.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else {
-                completionHandler(nil, response, error)
-                return
-            }
-            completionHandler(try? newJSONDecoder().decode(T.self, from: data), response, nil)
-        }
-    }
-
-    func homeDataTask(with url: URL, completionHandler: @escaping (HomeData?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        return self.codableTask(with: url, completionHandler: completionHandler)
     }
 }
