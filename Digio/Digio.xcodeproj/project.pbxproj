@@ -163,12 +163,9 @@
 		C2960C7E287A0F0F00B45985 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C2960CA0287B1F4200B45985 /* Scene */,
 				C2960C7F287A100500B45985 /* AppOrchestrator.swift */,
-				C22C042D2879D1D80048AE83 /* ViewController.swift */,
-				C2960C81287A11D800B45985 /* Interactor.swift */,
-				C2960C83287A123800B45985 /* Presenter.swift */,
 				C2960C85287A12E500B45985 /* Coordinator.swift */,
-				C2960C87287A15AB00B45985 /* Service.swift */,
 				C2960C9E287A707B00B45985 /* DependencyContainer.swift */,
 			);
 			path = Source;
@@ -201,6 +198,17 @@
 				C2960C9C287A703E00B45985 /* DependenciesProtocol.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		C2960CA0287B1F4200B45985 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C22C042D2879D1D80048AE83 /* ViewController.swift */,
+				C2960C81287A11D800B45985 /* Interactor.swift */,
+				C2960C83287A123800B45985 /* Presenter.swift */,
+				C2960C87287A15AB00B45985 /* Service.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

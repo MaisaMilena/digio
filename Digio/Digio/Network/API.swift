@@ -31,46 +31,52 @@ class Api<T: Decodable> {
         self.endpoint = endpoint
     }
 
-    func execute(completion: @escaping (Result<T, APIError>) -> Void) {
-        if let debugResult = handleDebug() {
-            completion(debugResult)
+    public func execute(completion: @escaping (Result<T, APIError>) -> Void) {
+        handleDebug { [weak self] result in
+            switch result {
+            case .failure:
+                self?.handleURL { result in
+                    completion(result)
+                }
+            case let .success(data):
+                completion(.success(data))
+            }
         }
-        completion(handleURL())
     }
     
     public func setDebugEndpoint(_ endpoint: ApiEndpoint) {
+        Sentinel.info("endpoint: \(endpoint.path)")
         debugEndpoint = endpoint
     }
     
     // MARK: Handle auxiliars
-    private func handleURL() -> Result<T, APIError> {
-        Sentinel.event("init")
+    private func handleURL(completion: @escaping (Result<T, APIError>) -> Void) {
         guard let url = endpoint.getURL() else {
-            return .failure(.urlNotFound)
+            completion(.failure(.urlNotFound))
+            return
         }
-        var result: Result<T, APIError> = .failure(.urlNotFound)
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            Sentinel.event("set result")
-            result = self.handleSession(data, response, error)
+        URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            completion(self?.handleSession(data, response, error) ?? .failure(.urlNotFound))
         }
         .resume()
-        return result
     }
     
-    private func handleDebug() -> Result<T, APIError>? {
-        var result: Result<T, APIError>?
+    private func handleDebug(completion: @escaping (Result<T, APIError>) -> Void) {
         if let debugEndpoint = debugEndpoint {
             guard let url = debugEndpoint.getURL() else {
-                return .failure(.urlNotFound)
+                completion(.failure(.urlNotFound))
+                return
             }
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                result = self.handleSession(data, response, error)
+            URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+                completion(self?.handleSession(data, response, error) ?? .failure(.urlNotFound))
             }
             .resume()
+        } else {
+            completion(.failure(.urlNotFound))
         }
-        return result
     }
     
+    // MARK: Handle session and data
     private func handleSession(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Result<T, APIError> {
         if error != nil {
             return .failure(.internetConection)
@@ -83,7 +89,7 @@ class Api<T: Decodable> {
         guard let model = self.handleJSONParse(data: data) else {
             return .failure(.decode)
         }
-        print(model)
+
         return .success(model)
     }
     

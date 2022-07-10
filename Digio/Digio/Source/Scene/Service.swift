@@ -14,7 +14,6 @@ extension Service: ServiceProtocol {
         let api = setupApi()
         dependency.mainQueue.async {
             api.execute { result in
-                Sentinel.event("got result")
                 completion(result)
             }
         }
@@ -23,7 +22,7 @@ extension Service: ServiceProtocol {
     private func setupApi() -> Api<HomeData> {
         let endpoint = Endpoint()
         let debugEndpoint = Endpoint(path: "http://127.0.0.1:3001", method: .get)
-        let api = Api<HomeData>.init(endpoint: endpoint)
+        let api = Api<HomeData>(endpoint: endpoint)
         api.setDebugEndpoint(debugEndpoint)
         return api
     }

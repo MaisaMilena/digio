@@ -6,13 +6,18 @@ public protocol CoordinatorProtocol: AnyObject {
 
 final class Coordinator {
     var viewController: UIViewController?
+    var dependency: HasMainQueue
     
-    init() {}
+    init(dependency: HasMainQueue) {
+        self.dependency = dependency
+    }
 }
 
 extension Coordinator: CoordinatorProtocol {
     func show(data: String) {
         Sentinel.info(data)
-        viewController?.view.backgroundColor = .green
+        dependency.mainQueue.async {
+            self.viewController?.view.backgroundColor = .green
+        }
     }
 }

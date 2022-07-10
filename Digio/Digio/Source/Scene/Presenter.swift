@@ -1,5 +1,5 @@
 public protocol PresenterProtocol: AnyObject {
-    func show(data: String)
+    func show(data: HomeData)
 }
 
 final class Presenter {
@@ -10,7 +10,7 @@ final class Presenter {
 }
 
 extension Presenter: PresenterProtocol {
-    func show(data: String) {
-        coordinator.show(data: data)
+    func show(data: HomeData) {
+        coordinator.show(data: data.cash.title)
     }
 }

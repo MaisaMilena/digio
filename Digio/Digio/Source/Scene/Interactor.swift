@@ -5,6 +5,7 @@ public protocol InteractorProtocol: AnyObject {
 final class Interactor {
     private let presenter: PresenterProtocol
     private let service: ServiceProtocol
+    private var data: HomeData?
     
     init(presenter: PresenterProtocol, service: ServiceProtocol) {
         self.presenter = presenter
@@ -14,14 +15,14 @@ final class Interactor {
 
 extension Interactor: InteractorProtocol {
     func fetch() {
-        service.fetch { result in
+        service.fetch { [weak self] result in
             switch result {
             case let .success(data):
-                Sentinel.info(data.cash.title)
+                self?.data = data
+                self?.presenter.show(data: data)
             case let .failure(error):
                 Sentinel.error(error.description)
             }
         }
-        presenter.show(data: "na Interactor")
     }
 }
