@@ -35,6 +35,7 @@ class Api<T: Decodable> {
         if let debugResult = handleDebug() {
             completion(debugResult)
         }
+        completion(handleURL())
     }
     
     public func setDebugEndpoint(_ endpoint: ApiEndpoint) {
@@ -42,33 +43,47 @@ class Api<T: Decodable> {
     }
     
     // MARK: Handle auxiliars
+    private func handleURL() -> Result<T, APIError> {
+        Sentinel.event("init")
+        guard let url = endpoint.getURL() else {
+            return .failure(.urlNotFound)
+        }
+        var result: Result<T, APIError> = .failure(.urlNotFound)
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            Sentinel.event("set result")
+            result = self.handleSession(data, response, error)
+        }
+        .resume()
+        return result
+    }
+    
     private func handleDebug() -> Result<T, APIError>? {
-        var result: Result<T, APIError>? = nil
+        var result: Result<T, APIError>?
         if let debugEndpoint = debugEndpoint {
             guard let url = debugEndpoint.getURL() else {
                 return .failure(.urlNotFound)
             }
             URLSession.shared.dataTask(with: url) { data, response, error in
                 result = self.handleSession(data, response, error)
-            }.resume()
+            }
+            .resume()
         }
         return result
     }
     
     private func handleSession(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Result<T, APIError> {
-        if let _ = error {
+        if error != nil {
             return .failure(.internetConection)
         }
 
-        guard let _ = self.handleResponse(response: response) else {
+        guard self.handleResponse(response: response) != nil else {
             return .failure(.urlNotFound)
-            
         }
 
         guard let model = self.handleJSONParse(data: data) else {
             return .failure(.decode)
         }
-
+        print(model)
         return .success(model)
     }
     
@@ -77,6 +92,7 @@ class Api<T: Decodable> {
         return try? JSONDecoder().decode(T.self, from: data)
     }
     
+    // swiftlint:disable indentation_width
     private func handleResponse(response: URLResponse?) -> HTTPURLResponse? {
         guard let httpResponse = response as? HTTPURLResponse,
               (200...299).contains(httpResponse.statusCode) else {

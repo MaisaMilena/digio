@@ -7,12 +7,12 @@ public protocol CoordinatorProtocol: AnyObject {
 final class Coordinator {
     var viewController: UIViewController?
     
-    init(){}
+    init() {}
 }
 
 extension Coordinator: CoordinatorProtocol {
     func show(data: String) {
-        print(data)
+        Sentinel.info(data)
         viewController?.view.backgroundColor = .green
     }
 }

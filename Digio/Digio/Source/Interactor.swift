@@ -14,12 +14,12 @@ final class Interactor {
 
 extension Interactor: InteractorProtocol {
     func fetch() {
-        let result = service.fetch { [weak self] result in
+        service.fetch { result in
             switch result {
-                case let .success(data):
-                    Sentinel.info(data.cash.title)
-                case let .failure(error):
-                    Sentinel.error(error.description)
+            case let .success(data):
+                Sentinel.info(data.cash.title)
+            case let .failure(error):
+                Sentinel.error(error.description)
             }
         }
         presenter.show(data: "na Interactor")

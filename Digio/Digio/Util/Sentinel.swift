@@ -25,6 +25,7 @@ final class Sentinel: Logger {
         log(level: "😱", message: message, file: file, function: function)
     }
     
+    // swiftlint:disable print_function_usage
     private static func log(
         level: String,
         message: String = "",

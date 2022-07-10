@@ -26,6 +26,8 @@
 		C2960C96287A59E300B45985 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C95287A59E300B45985 /* Endpoint.swift */; };
 		C2960C99287A609000B45985 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C98287A609000B45985 /* Logger.swift */; };
 		C2960C9B287A61A900B45985 /* Sentinel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C9A287A61A900B45985 /* Sentinel.swift */; };
+		C2960C9D287A703E00B45985 /* DependenciesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C9C287A703E00B45985 /* DependenciesProtocol.swift */; };
+		C2960C9F287A707B00B45985 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C9E287A707B00B45985 /* DependencyContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		C2960C95287A59E300B45985 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C2960C98287A609000B45985 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C2960C9A287A61A900B45985 /* Sentinel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentinel.swift; sourceTree = "<group>"; };
+		C2960C9C287A703E00B45985 /* DependenciesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesProtocol.swift; sourceTree = "<group>"; };
+		C2960C9E287A707B00B45985 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 				C2960C83287A123800B45985 /* Presenter.swift */,
 				C2960C85287A12E500B45985 /* Coordinator.swift */,
 				C2960C87287A15AB00B45985 /* Service.swift */,
+				C2960C9E287A707B00B45985 /* DependencyContainer.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			children = (
 				C2960C98287A609000B45985 /* Logger.swift */,
 				C2960C9A287A61A900B45985 /* Sentinel.swift */,
+				C2960C9C287A703E00B45985 /* DependenciesProtocol.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -360,9 +366,11 @@
 				C2960C94287A24D600B45985 /* API.swift in Sources */,
 				C2960C99287A609000B45985 /* Logger.swift in Sources */,
 				C2960C9B287A61A900B45985 /* Sentinel.swift in Sources */,
+				C2960C9D287A703E00B45985 /* DependenciesProtocol.swift in Sources */,
 				C2960C92287A23A400B45985 /* HomeData.swift in Sources */,
 				C22C042A2879D1D80048AE83 /* AppDelegate.swift in Sources */,
 				C2960C86287A12E500B45985 /* Coordinator.swift in Sources */,
+				C2960C9F287A707B00B45985 /* DependencyContainer.swift in Sources */,
 				C2960C8E287A215900B45985 /* Assets.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
