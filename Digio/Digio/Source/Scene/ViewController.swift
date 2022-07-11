@@ -1,7 +1,12 @@
 import UIKit
 
+public protocol ViewControlerDisplayProtocol {
+    func showHighlights(views: [UIImageView])
+}
+
 class ViewController: UIViewController {
     private var interactor: InteractorProtocol
+    private var tableview: UITableViewController
     
     init(interactor: InteractorProtocol) {
         self.interactor = interactor
@@ -16,5 +21,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .cyan
         interactor.fetch()
+    }
+}
+
+extension ViewController: ViewControlerDisplayProtocol {
+    func showHighlights(views: [UIImageView]) {
+        <#code#>
     }
 }

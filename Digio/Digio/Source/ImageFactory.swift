@@ -1,13 +1,6 @@
 import Foundation
 import UIKit
 
-struct ImagePresentationViewModel {
-    var placeholder: UIImage
-    var url: URL?
-    var title: String
-    var description: String
-}
-
 protocol ImageFactoryProtocol {
     typealias BannerStyle = UIImageView & ShadowBorder & RoundedBorder
     static func make(_ model: ImagePresentationViewModel) -> UIImageView
@@ -35,4 +28,3 @@ enum SpotlightFactory: ImageFactoryProtocol {
         SpotlightView(model: model)
     }
 }
-

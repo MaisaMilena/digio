@@ -1,7 +1,7 @@
 import UIKit
 
 public protocol CoordinatorProtocol: AnyObject {
-    func show(data: String)
+    func showHighligths(viewModels: [SpotlightView])
 }
 
 final class Coordinator {
@@ -14,6 +14,10 @@ final class Coordinator {
 }
 
 extension Coordinator: CoordinatorProtocol {
+    func showHighligths(viewModels: [SpotlightView]) {
+        <#code#>
+    }
+    
     func show(data: String) {
         Sentinel.info(data)
         dependency.mainQueue.async {

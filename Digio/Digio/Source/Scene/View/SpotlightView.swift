@@ -6,7 +6,7 @@ extension SpotlightView.Layout {
     static let width: CGFloat = 100
 }
 
-final class SpotlightView: UIImageView {
+public final class SpotlightView: UIImageView {
     enum Layout {}
     private lazy var borderStyle = ImageBorderStyle.light
     private lazy var shadowOpacity: Float = 0.3

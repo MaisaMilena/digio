@@ -4,6 +4,7 @@ public protocol PresenterProtocol: AnyObject {
 
 final class Presenter {
     private let coordinator: CoordinatorProtocol
+    private let display: 
     init(coordinator: CoordinatorProtocol) {
         self.coordinator = coordinator
     }
@@ -11,6 +12,7 @@ final class Presenter {
 
 extension Presenter: PresenterProtocol {
     func show(data: HomeData) {
+        
         coordinator.show(data: data.cash.title)
     }
 }
