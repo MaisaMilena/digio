@@ -1,7 +1,7 @@
 import UIKit
 
 public protocol CoordinatorProtocol: AnyObject {
-    func showHighligths(viewModels: [SpotlightView])
+    func goToDetail(of model: ImagePresentationViewModel)
 }
 
 final class Coordinator {
@@ -14,14 +14,7 @@ final class Coordinator {
 }
 
 extension Coordinator: CoordinatorProtocol {
-    func showHighligths(viewModels: [SpotlightView]) {
-        
-    }
-    
-    func show(data: String) {
-        Sentinel.info(data)
-        dependency.mainQueue.async {
-            self.viewController?.view.backgroundColor = .green
-        }
+    func goToDetail(of model: ImagePresentationViewModel) {
+        // TODO
     }
 }

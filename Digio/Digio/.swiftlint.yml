@@ -39,7 +39,6 @@ opt_in_rules:
   - first_where
   - force_unwrapping
   - implicitly_unwrapped_optional
-  - indentation_width
   - last_where
   - legacy_random
   - literal_expression_end_indentation
@@ -125,9 +124,6 @@ identifier_name:
     - lhs
     - rhs
     - ok
-
-indentation_width:
-  indentation_width: 4
 
 line_length:
   warning: 150

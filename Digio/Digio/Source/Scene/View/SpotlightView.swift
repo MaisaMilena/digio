@@ -2,8 +2,8 @@ import UIKit
 import SnapKit
 
 extension SpotlightView.Layout {
-    static let height: CGFloat = 100
-    static let width: CGFloat = 200
+    static let height: CGFloat = 180
+    static let width: CGFloat = height * 2.1
 }
 
 public final class SpotlightView: UIImageView {
@@ -19,6 +19,8 @@ public final class SpotlightView: UIImageView {
         setupImage(placeholder: model.placeholder, url: model.url)
         setupInteraction(title: model.title)
         setupConstraints()
+        roundBorder()
+        addShadow()
     }
     
     required init?(coder: NSCoder) {
@@ -43,7 +45,7 @@ public final class SpotlightView: UIImageView {
     private func setupConstraints() {
         Sentinel.event("")
         self.snp.makeConstraints {
-//            $0.width.equalTo(Layout.width)
+            $0.width.equalTo(Layout.width)
             $0.height.equalTo(Layout.height)
         }
     }
@@ -57,6 +59,7 @@ extension SpotlightView: RoundedBorder {
     }
     
     func roundBorder() {
+        Sentinel.event("")
         ViewCompositor.addBorder(for: self)
     }
 }
@@ -73,6 +76,7 @@ extension SpotlightView: ShadowBorder {
     }
     
     func addShadow() {
+        Sentinel.event("")
         ViewCompositor.addShadow(for: self)
     }
 }

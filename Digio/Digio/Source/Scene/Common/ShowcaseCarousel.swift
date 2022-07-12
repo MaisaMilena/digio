@@ -17,7 +17,15 @@ extension ShowcaseCarousel: ShowcaseProtocol {
     }
 }
 
+extension ShowcaseCarousel.Layout {
+    enum Highlight {
+        static let carouselHeight = 200
+    }
+}
+
 final class ShowcaseCarousel: UIView {
+    enum Layout {}
+    
     private var elements: [ImagePresentationViewModel] = []
     private var imageFactory: ImageFactoryProtocol?
     private var delegate: ShowcaseCarouselDelegate
@@ -25,15 +33,15 @@ final class ShowcaseCarousel: UIView {
     private lazy var carousel: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.estimatedItemSize = CGSize(width: 300, height: 100)
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         
         let collection = UICollectionView(frame: self.frame, collectionViewLayout: layout)
         collection.delegate = self
         collection.dataSource = self
-        collection.showsHorizontalScrollIndicator = false
+//        collection.showsHorizontalScrollIndicator = false
         collection.isScrollEnabled = true
         collection.isUserInteractionEnabled = true
-        collection.isAccessibilityElement = true
+//        collection.isAccessibilityElement = true
         collection.register(
             ShowcaseCell.self,
             forCellWithReuseIdentifier: ShowcaseCell.identifier
@@ -44,10 +52,9 @@ final class ShowcaseCarousel: UIView {
     init(delegate: ShowcaseCarouselDelegate) {
         self.delegate = delegate
         super.init(frame: .zero)
-        isUserInteractionEnabled = true
         addSubview(carousel)
         carousel.snp.makeConstraints {
-            $0.height.equalTo(150)
+            $0.height.equalTo(Layout.Highlight.carouselHeight)
             $0.width.equalToSuperview()
         }
     }
@@ -59,8 +66,7 @@ final class ShowcaseCarousel: UIView {
 
 extension ShowcaseCarousel: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        Sentinel.info("elements: \(elements.count.description)")
-        return elements.count
+        elements.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,6 +79,7 @@ extension ShowcaseCarousel: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell?.addBanner(factory.make(content))
+        cell?.layoutIfNeeded()
         return cell ?? UICollectionViewCell()
     }
 }
@@ -86,6 +93,7 @@ extension ShowcaseCarousel: UICollectionViewDelegate {
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        Sentinel.event("collect width: \(collectionView.frame.size.width)")
         return CGSize(width: collectionView.frame.size.width - 50, height: collectionView.frame.size.height)
     }
 }

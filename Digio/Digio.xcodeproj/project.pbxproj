@@ -36,7 +36,6 @@
 		C2960CB3287B97D800B45985 /* ShowcaseCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960CB2287B97D800B45985 /* ShowcaseCarousel.swift */; };
 		C2D45CDF287B99E300E52DE6 /* ShowcaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D45CDE287B99E200E52DE6 /* ShowcaseCell.swift */; };
 		C2D45CE1287B9CAB00E52DE6 /* UICollection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D45CE0287B9CAB00E52DE6 /* UICollection+Extension.swift */; };
-		C2F9EC9F287BA4C000D081CF /* ShowcaseContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F9EC9E287BA4C000D081CF /* ShowcaseContainerView.swift */; };
 		C2F9ECA1287BA78E00D081CF /* ImagePresentationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F9ECA0287BA78E00D081CF /* ImagePresentationViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +89,6 @@
 		C2960CB2287B97D800B45985 /* ShowcaseCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseCarousel.swift; sourceTree = "<group>"; };
 		C2D45CDE287B99E200E52DE6 /* ShowcaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseCell.swift; sourceTree = "<group>"; };
 		C2D45CE0287B9CAB00E52DE6 /* UICollection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollection+Extension.swift"; sourceTree = "<group>"; };
-		C2F9EC9E287BA4C000D081CF /* ShowcaseContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowcaseContainerView.swift; sourceTree = "<group>"; };
 		C2F9ECA0287BA78E00D081CF /* ImagePresentationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresentationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,7 +248,6 @@
 			children = (
 				C2960CB2287B97D800B45985 /* ShowcaseCarousel.swift */,
 				C2D45CDE287B99E200E52DE6 /* ShowcaseCell.swift */,
-				C2F9EC9E287BA4C000D081CF /* ShowcaseContainerView.swift */,
 				C2F9ECA0287BA78E00D081CF /* ImagePresentationViewModel.swift */,
 			);
 			path = Common;
@@ -437,7 +434,6 @@
 				C2960CA7287B36C100B45985 /* UIImageView+Extension.swift in Sources */,
 				C2960C8E287A215900B45985 /* Assets.generated.swift in Sources */,
 				C2960CAC287B47C400B45985 /* ImageFactory.swift in Sources */,
-				C2F9EC9F287BA4C000D081CF /* ShowcaseContainerView.swift in Sources */,
 				C2D45CE1287B9CAB00E52DE6 /* UICollection+Extension.swift in Sources */,
 				C2960CB0287B583300B45985 /* ViewCompositor.swift in Sources */,
 			);
