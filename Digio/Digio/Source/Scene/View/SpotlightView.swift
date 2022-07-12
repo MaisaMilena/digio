@@ -4,17 +4,17 @@ import SnapKit
 extension SpotlightView.Layout {
     static let height: CGFloat = 180
     static let width: CGFloat = height * 2.1
+    static let opacity: Float = 0.4
 }
 
 public final class SpotlightView: UIImageView {
     enum Layout {}
     private lazy var borderStyle = ImageBorderStyle.light
-    private lazy var shadowOpacity: Float = 0.3
-    private lazy var shadowRadius: CGFloat = borderStyle.rawValue
+    private lazy var shadowOpacity = Layout.opacity
+    private lazy var shadowRadius = borderStyle.rawValue
     
     init(model: ImagePresentationViewModel) {
         super.init(frame: .zero)
-        clipsToBounds = true
         contentMode = .scaleToFill
         setupImage(placeholder: model.placeholder, url: model.url)
         setupInteraction(title: model.title)
@@ -43,7 +43,6 @@ public final class SpotlightView: UIImageView {
     }
     
     private func setupConstraints() {
-        Sentinel.event("")
         self.snp.makeConstraints {
             $0.width.equalTo(Layout.width)
             $0.height.equalTo(Layout.height)
@@ -59,7 +58,6 @@ extension SpotlightView: RoundedBorder {
     }
     
     func roundBorder() {
-        Sentinel.event("")
         ViewCompositor.addBorder(for: self)
     }
 }
@@ -76,7 +74,6 @@ extension SpotlightView: ShadowBorder {
     }
     
     func addShadow() {
-        Sentinel.event("")
         ViewCompositor.addShadow(for: self)
     }
 }

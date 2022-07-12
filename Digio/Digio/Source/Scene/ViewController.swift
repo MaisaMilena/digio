@@ -25,14 +25,13 @@ class ViewController: UIViewController {
     
     private func setupCarousel() {
         carouselHighlight = ShowcaseCarousel(delegate: self)
-        carouselHighlight?.isUserInteractionEnabled = true
         if let carouselHighlight = carouselHighlight {
-            view.addSubview(carouselHighlight)
+            view.addSubview(carouselHighlight.carousel)
         }
     }
     
     private func setupContraints() {
-        if let carouselHighlight = carouselHighlight {
+        if let carouselHighlight = carouselHighlight?.carousel {
             carouselHighlight.snp.makeConstraints {
                 $0.topMargin.equalTo(view.safeAreaInsets.top)
                 $0.leading.trailing.equalToSuperview()
