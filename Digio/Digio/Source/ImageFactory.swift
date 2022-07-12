@@ -1,9 +1,8 @@
 import Foundation
 import UIKit
 
-protocol ImageFactoryProtocol {
-    typealias BannerStyle = UIImageView & ShadowBorder & RoundedBorder
-    static func make(_ model: ImagePresentationViewModel) -> UIImageView
+protocol ImageFactoryProtocol: AnyObject {
+    func make(_ model: ImagePresentationViewModel) -> UIImageView
 }
 
 protocol RoundedBorder: UIView {
@@ -23,8 +22,8 @@ enum ImageBorderStyle: CGFloat {
 }
 
 // MARK: Factory implementation
-enum SpotlightFactory: ImageFactoryProtocol {
-    static func make(_ model: ImagePresentationViewModel) -> UIImageView {
+final class SpotlightFactory: ImageFactoryProtocol {
+    func make(_ model: ImagePresentationViewModel) -> UIImageView {
         SpotlightView(model: model)
     }
 }

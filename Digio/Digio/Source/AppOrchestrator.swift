@@ -10,6 +10,7 @@ enum AppOrchestrator {
         let viewController = ViewController(interactor: interactor)
         
         coordinator.viewController = viewController
+        presenter.viewController = viewController
         
         return viewController
     }

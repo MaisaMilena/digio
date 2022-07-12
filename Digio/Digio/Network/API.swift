@@ -32,10 +32,10 @@ class Api<T: Decodable> {
     }
 
     public func execute(completion: @escaping (Result<T, APIError>) -> Void) {
-        handleDebug { [weak self] result in
+        handleDebug { result in
             switch result {
             case .failure:
-                self?.handleURL { result in
+                self.handleURL { result in
                     completion(result)
                 }
             case let .success(data):
@@ -45,7 +45,6 @@ class Api<T: Decodable> {
     }
     
     public func setDebugEndpoint(_ endpoint: ApiEndpoint) {
-        Sentinel.info("endpoint: \(endpoint.path)")
         debugEndpoint = endpoint
     }
     

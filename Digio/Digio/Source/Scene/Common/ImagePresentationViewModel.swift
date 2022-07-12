@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct ImagePresentationViewModel {
+public struct ImagePresentationViewModel {
     var placeholder: UIImage
     var url: URL?
     var title: String
@@ -9,7 +9,7 @@ struct ImagePresentationViewModel {
 }
 
 extension ImagePresentationViewModel: Equatable {
-    static func ==(
+    public static func == (
         lhs: ImagePresentationViewModel,
         rhs: ImagePresentationViewModel
     ) -> Bool {

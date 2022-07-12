@@ -5,8 +5,9 @@ final class ShowcaseCell: UICollectionViewCell {
     
     func addBanner(_ banner: UIImageView) {
         addSubview(banner)
+        isUserInteractionEnabled = true
         banner.snp.makeConstraints {
-            $0.margins.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
     }
 }

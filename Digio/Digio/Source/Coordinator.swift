@@ -15,7 +15,7 @@ final class Coordinator {
 
 extension Coordinator: CoordinatorProtocol {
     func showHighligths(viewModels: [SpotlightView]) {
-        <#code#>
+        
     }
     
     func show(data: String) {
