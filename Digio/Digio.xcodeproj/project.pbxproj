@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C22463CC287FA675004C9B6E /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22463CB287FA675004C9B6E /* InteractorTests.swift */; };
+		C22463CF287FA80D004C9B6E /* PresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22463CE287FA80D004C9B6E /* PresenterSpy.swift */; };
+		C22463D1287FA860004C9B6E /* ServiceStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22463D0287FA860004C9B6E /* ServiceStub.swift */; };
+		C22463D3287FAA39004C9B6E /* ServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22463D2287FAA39004C9B6E /* ServiceMock.swift */; };
+		C22463D6287FB2C8004C9B6E /* InteratorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22463D5287FB2C8004C9B6E /* InteratorSpy.swift */; };
+		C22463D8287FB2DF004C9B6E /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22463D7287FB2DF004C9B6E /* ServiceTests.swift */; };
 		C22C042A2879D1D80048AE83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C04292879D1D80048AE83 /* AppDelegate.swift */; };
 		C22C042E2879D1D80048AE83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C042D2879D1D80048AE83 /* ViewController.swift */; };
 		C22C04332879D1DC0048AE83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22C04322879D1DC0048AE83 /* Assets.xcassets */; };
 		C22C04362879D1DC0048AE83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22C04342879D1DC0048AE83 /* LaunchScreen.storyboard */; };
-		C22C04412879D1DC0048AE83 /* DigioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C04402879D1DC0048AE83 /* DigioTests.swift */; };
 		C22C045A2879D4B30048AE83 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C04592879D4B30048AE83 /* UIWindow+Extension.swift */; };
 		C2960C80287A100500B45985 /* AppOrchestrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C7F287A100500B45985 /* AppOrchestrator.swift */; };
 		C2960C82287A11D800B45985 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2960C81287A11D800B45985 /* Interactor.swift */; };
@@ -47,16 +52,15 @@
 			remoteGlobalIDString = C22C04252879D1D80048AE83;
 			remoteInfo = Digio;
 		};
-		C22C04472879D1DC0048AE83 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C22C041E2879D1D80048AE83 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C22C04252879D1D80048AE83;
-			remoteInfo = Digio;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C22463CB287FA675004C9B6E /* InteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
+		C22463CE287FA80D004C9B6E /* PresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterSpy.swift; sourceTree = "<group>"; };
+		C22463D0287FA860004C9B6E /* ServiceStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStub.swift; sourceTree = "<group>"; };
+		C22463D2287FAA39004C9B6E /* ServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMock.swift; sourceTree = "<group>"; };
+		C22463D5287FB2C8004C9B6E /* InteratorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteratorSpy.swift; sourceTree = "<group>"; };
+		C22463D7287FB2DF004C9B6E /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		C22C04262879D1D80048AE83 /* Digio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22C04292879D1D80048AE83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C22C042D2879D1D80048AE83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,8 +68,6 @@
 		C22C04352879D1DC0048AE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C22C04372879D1DC0048AE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C22C043C2879D1DC0048AE83 /* DigioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C22C04402879D1DC0048AE83 /* DigioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioTests.swift; sourceTree = "<group>"; };
-		C22C04462879D1DC0048AE83 /* DigioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22C04592879D4B30048AE83 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		C2960C7F287A100500B45985 /* AppOrchestrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOrchestrator.swift; sourceTree = "<group>"; };
 		C2960C81287A11D800B45985 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -108,16 +110,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C22C04432879D1DC0048AE83 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22463D4287FB2A6004C9B6E /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				C22463CE287FA80D004C9B6E /* PresenterSpy.swift */,
+				C22463D0287FA860004C9B6E /* ServiceStub.swift */,
+				C22463D2287FAA39004C9B6E /* ServiceMock.swift */,
+				C22463D5287FB2C8004C9B6E /* InteratorSpy.swift */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
 		C22C041D2879D1D80048AE83 = {
 			isa = PBXGroup;
 			children = (
@@ -132,7 +138,6 @@
 			children = (
 				C22C04262879D1D80048AE83 /* Digio.app */,
 				C22C043C2879D1DC0048AE83 /* DigioTests.xctest */,
-				C22C04462879D1DC0048AE83 /* DigioUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,7 +160,9 @@
 		C22C043F2879D1DC0048AE83 /* DigioTests */ = {
 			isa = PBXGroup;
 			children = (
-				C22C04402879D1DC0048AE83 /* DigioTests.swift */,
+				C22463CB287FA675004C9B6E /* InteractorTests.swift */,
+				C22463D7287FB2DF004C9B6E /* ServiceTests.swift */,
+				C22463D4287FB2A6004C9B6E /* Doubles */,
 			);
 			path = DigioTests;
 			sourceTree = "<group>";
@@ -295,24 +302,6 @@
 			productReference = C22C043C2879D1DC0048AE83 /* DigioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C22C04452879D1DC0048AE83 /* DigioUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C22C04562879D1DC0048AE83 /* Build configuration list for PBXNativeTarget "DigioUITests" */;
-			buildPhases = (
-				C22C04422879D1DC0048AE83 /* Sources */,
-				C22C04432879D1DC0048AE83 /* Frameworks */,
-				C22C04442879D1DC0048AE83 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C22C04482879D1DC0048AE83 /* PBXTargetDependency */,
-			);
-			name = DigioUITests;
-			productName = DigioUITests;
-			productReference = C22C04462879D1DC0048AE83 /* DigioUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -327,10 +316,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					C22C043B2879D1DC0048AE83 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = C22C04252879D1D80048AE83;
-					};
-					C22C04452879D1DC0048AE83 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = C22C04252879D1D80048AE83;
 					};
@@ -354,7 +339,6 @@
 			targets = (
 				C22C04252879D1D80048AE83 /* Digio */,
 				C22C043B2879D1DC0048AE83 /* DigioTests */,
-				C22C04452879D1DC0048AE83 /* DigioUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -370,13 +354,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C22C043A2879D1DC0048AE83 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C22C04442879D1DC0048AE83 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -443,14 +420,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C22C04412879D1DC0048AE83 /* DigioTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C22C04422879D1DC0048AE83 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C22463D6287FB2C8004C9B6E /* InteratorSpy.swift in Sources */,
+				C22463D8287FB2DF004C9B6E /* ServiceTests.swift in Sources */,
+				C22463CF287FA80D004C9B6E /* PresenterSpy.swift in Sources */,
+				C22463D3287FAA39004C9B6E /* ServiceMock.swift in Sources */,
+				C22463CC287FA675004C9B6E /* InteractorTests.swift in Sources */,
+				C22463D1287FA860004C9B6E /* ServiceStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,11 +436,6 @@
 			isa = PBXTargetDependency;
 			target = C22C04252879D1D80048AE83 /* Digio */;
 			targetProxy = C22C043D2879D1DC0048AE83 /* PBXContainerItemProxy */;
-		};
-		C22C04482879D1DC0048AE83 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C22C04252879D1D80048AE83 /* Digio */;
-			targetProxy = C22C04472879D1DC0048AE83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -691,42 +661,6 @@
 			};
 			name = Release;
 		};
-		C22C04572879D1DC0048AE83 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B33RKQE9R2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mai-chan.DigioUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Digio;
-			};
-			name = Debug;
-		};
-		C22C04582879D1DC0048AE83 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B33RKQE9R2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mai-chan.DigioUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Digio;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -753,15 +687,6 @@
 			buildConfigurations = (
 				C22C04542879D1DC0048AE83 /* Debug */,
 				C22C04552879D1DC0048AE83 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C22C04562879D1DC0048AE83 /* Build configuration list for PBXNativeTarget "DigioUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C22C04572879D1DC0048AE83 /* Debug */,
-				C22C04582879D1DC0048AE83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

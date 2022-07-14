@@ -41,11 +41,12 @@ final class ShowcaseCarousel: UIViewController {
         layout.scrollDirection = .horizontal
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.minimumLineSpacing = Layout.Spacing.horizontal
+        layout.minimumInteritemSpacing = Layout.Spacing.horizontal
         
         let collection = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collection.delegate = self
         collection.dataSource = self
-        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
         collection.isUserInteractionEnabled = true
         collection.register(
             ShowcaseCell.self,
